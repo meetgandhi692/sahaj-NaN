@@ -27,7 +27,7 @@ We need a system to be able to manage data for employees. Requests will be accep
 6. Do not touch the GitHub actions code. It is used to test your code automatically and score it. Any modifications will lead to immediate disqualification.
 7. Maximum time a single request can take is 10 seconds
 
-#### Data to be stored
+### Data to be stored
 ```
 {
     id: string,
@@ -36,7 +36,11 @@ We need a system to be able to manage data for employees. Requests will be accep
 }
 ```
 
-### API contract
+----
+
+## API contract
+
+----
 
 ### GET /greeting
   Checks whether the service is available.
@@ -45,6 +49,7 @@ We need a system to be able to manage data for employees. Requests will be accep
 * Code: 200  
 * Content: `Hello world!` 
 
+----
 
 ### POST /employee
 Creates a new Employee and returns the employeeId
@@ -64,6 +69,7 @@ Content-Type: application/json
 * Status code: 201
 * Content: `{ "employeeId": "<employee_id>" }` (Note: Employee ID is a `string`)
 
+----
 
 ### GET /employee/:id
 Returns the specified employee.
@@ -87,6 +93,7 @@ Returns list of all employees.
 * Status code: 200
 * Content: `[{ <employee_object> }]`
 
+----
 
 ### PUT /employee/:id
 Updates fields of the existing employee and returns the new object.
@@ -113,6 +120,7 @@ Content-Type: application/json
 * Code: 404
 * Content: `{ message : "Employee with <employee_id> was not found" }`
 
+----
 
 ### DELETE /employee/:id
   Deletes existing employee record.
