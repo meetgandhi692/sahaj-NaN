@@ -85,6 +85,7 @@ Returns the specified employee.
 * Status code: 404
 * Content: `{ message : "Employee with <employee_id> was not found" }`
 
+----
 
 ### GET /employee/all
 Returns list of all employees.
