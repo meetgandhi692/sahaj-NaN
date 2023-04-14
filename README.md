@@ -36,8 +36,9 @@ We need a system to be able to manage data for employees. Requests will be accep
 }
 ```
 
-#### API contract
-##### GET /greeting
+### API contract
+
+### GET /greeting
   Checks whether the service is available.
 
 ###### Response
@@ -45,7 +46,7 @@ We need a system to be able to manage data for employees. Requests will be accep
 * Content: `Hello world!` 
 
 
-##### POST /employee
+### POST /employee
 Creates a new Employee and returns the employeeId
 
 ###### Request & Response headers
@@ -64,7 +65,7 @@ Content-Type: application/json
 * Content: `{ "employeeId": "<employee_id>" }` (Note: Employee ID is a `string`)
 
 
-##### GET /employee/:id
+### GET /employee/:id
 Returns the specified employee.
 
 ###### URL Params
@@ -79,7 +80,7 @@ Returns the specified employee.
 * Content: `{ message : "Employee with <employee_id> was not found" }`
 
 
-##### GET /employee/all
+### GET /employee/all
 Returns list of all employees.
 
 ###### Success Response
@@ -87,7 +88,7 @@ Returns list of all employees.
 * Content: `[{ <employee_object> }]`
 
 
-##### PUT /employee/:id
+### PUT /employee/:id
 Updates fields of the existing employee and returns the new object.
 
 ###### URL Params
@@ -113,7 +114,7 @@ Content-Type: application/json
 * Content: `{ message : "Employee with <employee_id> was not found" }`
 
 
-##### DELETE /employee/:id
+### DELETE /employee/:id
   Deletes existing employee record.
 
 ###### URL Params
